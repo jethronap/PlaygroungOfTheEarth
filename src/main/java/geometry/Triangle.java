@@ -1,0 +1,57 @@
+package geometry;
+
+public class Triangle implements IPolygon {
+
+    int sides = 3;
+    double sideA;
+    double sideB;
+    double sideC;
+
+    public Triangle(int sides) {
+        this.sides = 3;
+    }
+
+    /**
+     * We'll use Herons' formula to calculate the area as we only know the lengths of all three sides.
+     *
+     * Let a,b,c be the lengths of the sides of a triangle. The area is given by:
+     * Area	= √p(p − a)(p − b)(p − c)
+     * where p is half the perimeter, or (a+b+c)/2.
+     *
+     * @return
+     */
+    public double area() {
+
+        double p = (sideA + sideB + sideC) / 2;
+        double area = Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
+        return area;
+    }
+
+    public double perimeter() {
+        return sideA + sideB + sideC;
+    }
+
+    public double getSideA() {
+        return sideA;
+    }
+
+    public void setSideA(double sideA) {
+        this.sideA = sideA;
+    }
+
+    public double getSideB() {
+        return sideB;
+    }
+
+    public void setSideB(double sideB) {
+        this.sideB = sideB;
+    }
+
+    public double getSideC() {
+        return sideC;
+    }
+
+    public void setSideC(double sideC) {
+        this.sideC = sideC;
+    }
+}
