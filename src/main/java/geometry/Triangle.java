@@ -11,6 +11,12 @@ public class Triangle implements IPolygon {
         this.sides = 3;
     }
 
+    public Triangle(double sideA, double sideB, double sideC) {
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.sideC = sideC;
+    }
+
     /**
      * We'll use Herons' formula to calculate the area as we only know the lengths of all three sides.
      *
