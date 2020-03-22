@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class LargeFileReader {
 
-    public void readFile() throws IOException {
+    public void readLines() throws IOException {
 
         final String path = "src/main/resources/testData/sentinelFile.txt";
 
