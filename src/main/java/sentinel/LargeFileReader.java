@@ -8,8 +8,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -17,6 +16,7 @@ public class LargeFileReader {
 
     /**
      * Using Commons io LineIterator
+     *
      * @throws IOException
      */
     public void readLines() throws IOException {
@@ -33,20 +33,34 @@ public class LargeFileReader {
     }
 
     /**
-     * Usign Java Nio
+     * Using Java Nio
+     *
      * @throws IOException
      */
-    public void readFile () throws IOException {
+    public void readFile() throws IOException {
         Path path = Paths.get("src/main/resources/testData/sentinelFile.txt");
 
-        List<String> listOfData = new ArrayList<>();
+        Stream<String> lines = Files.lines(path);
+        String data = lines.collect(Collectors.joining());
+        String[] words = data.split("\\W+");
 
+        System.out.println(Arrays.toString(words));
+//        for (String word : words) {
+//            System.out.println(word);
+//        }
+        lines.close();
+    }
+
+    public String[] createArrayOfWordsFromFile() throws IOException {
+
+        Path path = Paths.get("src/main/resources/testData/sentinelFile.txt");
 
         Stream<String> lines = Files.lines(path);
-        String data = lines.collect(Collectors.joining("\n"));
-        listOfData.add(data);
-        System.out.println(listOfData.get(0));
+        String data = lines.collect(Collectors.joining());
+        String[] words = data.split("\\W+");
         lines.close();
+
+        return words;
     }
 
 }
