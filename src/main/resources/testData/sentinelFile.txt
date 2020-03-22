@@ -1,0 +1,37 @@
+1. Overview
+In this tutorial, we'll explore different ways to read from a File in Java.
+First, we'll see how to load a file from the classpath, a URL or from a JAR file, using standard Java classes.
+Second, we'll see how to read the content with BufferedReader, Scanner, StreamTokenizer, DataInputStream, SequenceInputStream, and FileChannel. Also, we will discuss how to read a UTF-8 encoded file.
+Finally, we’ll explore the new techniques to load and read a file in Java 7 and Java 8.
+This article is part of the “Java – Back to Basic” series here on Baeldung.
+Further reading:
+Java – Create a File
+How to create a File in Java using JDK 6, JDK 7 with NIO or Commons IO.
+Read more →
+Java – Write to File
+The many ways to write data to File using Java.
+Read more →
+2. Setup
+2.1 Input File
+In most examples in this article, we'll read a text file with filename fileTest.txt that contains one line:
+1
+Hello, world!
+In a few examples, we'll use a different file. In these cases, we'll mention the file and its content explicitly.
+2.2 Helper Method
+We will use a set of test examples using core Java classes only, and in the tests, we'll use assertions using Hamcrest matchers.
+Tests will share a common readFromInputStream method that transforms an InputStream to String for easier asserting of results:
+The main difference is that when using the getResourceAsStream on a ClassLoader instance, the path is treated as absolute starting from the root of the classpath.
+When used against a Class instance, the path could be relative to the package, or an absolute path, which is hinted by the leading slash.
+Of course, note that in practice, open streams should always be closed, such as the InputStream in our example:
+Here we pass the File object to the method readFileToString() of FileUtils class. This utility class manages to load the content without the necessity of writing any boilerplate code to create an InputStream instance and read data.
+Using Stream with IO channels like file operations, we need to close the stream explicitly using the close() method.
+As we can see, the Files API offers another easy way to read the file contents into a String.
+In the next sections, let's have a look at other, less common methods of reading a file, that may be appropriate in some situations.
+6. Reading with Scanner
+Next, let's use a Scanner to read from the File. Here, we'll use whitespace as the delimiter:
+Here we want to load LICENSE.txt that resides in Hamcrest library, so we will use the Matcher's class that helps to get a resource. The same file can be loaded using the classloader too.
+13. Conclusion
+As you can see, there are many possibilities for loading a file and reading data from it using plain Java.
+You can load a file from various locations like classpath, URL or jar files.
+Then you can use BufferedReader to read line by line, Scanner to read using different delimiters, StreamTokenizer to read a file into tokens, DataInputStream to read binary data and primitive data types, SequenceInput Stream to link multiple files into one stream, FileChannel to read faster from large files, etc.
+You can find the source code in the following GitHub repo.
