@@ -28,7 +28,14 @@
             <artifactId>commons-io</artifactId>
             <version>2.6</version>
         </dependency>
-        
+
+        <!-- https://mvnrepository.com/artifact/io.github.jethronap/jstat -->
+        <dependency>
+            <groupId>io.github.jethronap</groupId>
+            <artifactId>jstat</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>
