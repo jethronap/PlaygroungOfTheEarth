@@ -34,7 +34,9 @@ public class DynamicArray<T> implements Iterable<T> {
         arr[index] = elem;
     }
 
-    // remove all the elements of the array and reset length
+    /**
+     * remove all the elements of the array and reset length
+     */
     public void clear() {
         for (int i = 0; i < capacity; i++) {
             arr[i] = null;
