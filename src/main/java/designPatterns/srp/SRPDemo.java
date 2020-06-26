@@ -9,9 +9,11 @@ public class SRPDemo {
         System.out.println(diary);
 
         Persistence persistence = new Persistence();
+        // the following will produce a file name diary.txt if missing
         String filename = "src/main/java/designPatterns/srp/diary.txt";
         persistence.saveToFile(diary, filename, true);
 
+        // opens diary file with Atom application
         Runtime.getRuntime().exec("atom " + filename);
     }
 }
