@@ -3,7 +3,9 @@ package designPatterns.srp;
 import java.util.ArrayList;
 import java.util.List;
 
-// this is a class to keep all your intimate thoughts
+/**
+ * this is a class to keep all your intimate thoughts
+ */
 public class Diary {
 
     private final List<String> entriesToDiary = new ArrayList<>();
