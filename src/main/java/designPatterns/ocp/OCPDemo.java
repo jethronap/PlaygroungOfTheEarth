@@ -16,5 +16,14 @@ public class OCPDemo {
         pf.filterByColor(products, Color.GREEN)
                 .forEach(p -> System.out.println(" - " + p.name + " is green."));
 
+        /**
+         * new implementation of filtering using the Specification DesignPattern
+         * we can just use inheritance and interface implementation
+         * we don't jump into already existing classes.
+         */
+        ProductFilterNew productFilterNew = new ProductFilterNew();
+        System.out.println("Green Products (new):");
+        productFilterNew.filter(products, new ColorSpecification(Color.GREEN))
+                .forEach(p -> System.out.println(" - " + p.name + " is green."));
     }
 }
