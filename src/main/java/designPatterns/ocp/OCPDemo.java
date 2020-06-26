@@ -25,5 +25,14 @@ public class OCPDemo {
         System.out.println("Green Products (new):");
         productFilterNew.filter(products, new ColorSpecification(Color.GREEN))
                 .forEach(p -> System.out.println(" - " + p.name + " is green."));
+
+        /**
+         * another implementation using the combinator class
+         */
+        System.out.println("Huge Red items:");
+        productFilterNew.filter(products, new AndSpecification<>(
+                new ColorSpecification(Color.RED),
+                new SizeSpecification(Size.HUGE)
+        )).forEach(p -> System.out.println(" - " + p.name + " is huge and red."));
     }
 }
