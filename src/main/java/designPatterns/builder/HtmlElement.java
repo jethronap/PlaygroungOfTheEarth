@@ -26,7 +26,7 @@ public class HtmlElement {
         // we want to get the indentation correct thus the use of Collections
         String i = String.join("", Collections.nCopies(indent * indent, " "));
         // this is were tags are appended
-        sb.append(String.format("%s<%s>%", i, name, newLine));
+        sb.append(String.format("%s<%s>%s", i, name, newLine));
         // if there is text it's appended
         if (text != null && !text.isEmpty()) {
             // with a new line
