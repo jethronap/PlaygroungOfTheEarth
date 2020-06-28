@@ -13,9 +13,14 @@ public class HtmlBuilder {
         root.name = rootName;
     }
 
-    public void addChild(String childName, String childText) {
+    /**
+     * allowing fluent interface,
+     * when return type is HtmlBuilder
+     */
+    public HtmlBuilder addChild(String childName, String childText) {
         HtmlElement e = new HtmlElement(childName, childText);
         root.elements.add(e);
+        return this;
     }
 
     public void clear() {

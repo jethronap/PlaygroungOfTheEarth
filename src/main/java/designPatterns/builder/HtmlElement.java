@@ -40,7 +40,7 @@ public class HtmlElement {
             sb.append(e.toStringImpl(indent + 1));
         }
         // the closing tags are appended
-        sb.append(String.format("%s</%s>", i, name, newLine));
+        sb.append(String.format("%s</%s>%s", i, name, newLine));
         return sb.toString();
     }
 

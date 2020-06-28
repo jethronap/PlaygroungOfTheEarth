@@ -22,11 +22,16 @@ public class Demo {
         */
 
         /**
+         * fluent interface: allowing chaining where building is needed
+         */
+
+        /**
          * Implementation using HtmlBuilder
          */
         HtmlBuilder builder = new HtmlBuilder("ul");
-        builder.addChild("li", "hello");
-        builder.addChild("li", "world");
+        builder.addChild("li", "hello")
+                .addChild("li", "world");
+
         System.out.println(builder);
     }
 }
