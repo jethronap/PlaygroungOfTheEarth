@@ -13,6 +13,16 @@ public class PersonBuilder<SELF extends PersonBuilder<SELF>> {
     public SELF withName(String name) {
         person.name = name;
         // cast this to SELF
+        // return (SELF) this;
+        // use helper method
+        return self();
+    }
+
+    /**
+     * used in order to be able to
+     * override self in derived classes
+     */
+    protected SELF self() {
         return (SELF) this;
     }
 }
