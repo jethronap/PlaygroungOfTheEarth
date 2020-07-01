@@ -9,8 +9,10 @@ public class PersonBuilder<SELF extends PersonBuilder<SELF>> {
 
     protected Person person = new Person();
 
-    public PersonBuilder withName(String name) {
+    // changed the return type from PersonBuilder to SELF
+    public SELF withName(String name) {
         person.name = name;
-        return this;
+        // cast this to SELF
+        return (SELF) this;
     }
 }
