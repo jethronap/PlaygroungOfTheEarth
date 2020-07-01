@@ -18,6 +18,10 @@ public class PersonBuilder<SELF extends PersonBuilder<SELF>> {
         return self();
     }
 
+    public Person build() {
+        return person;
+    }
+
     /**
      * used in order to be able to
      * override self in derived classes
