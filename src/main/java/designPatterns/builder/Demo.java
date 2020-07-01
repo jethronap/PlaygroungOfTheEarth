@@ -33,5 +33,15 @@ public class Demo {
                 .addChild("li", "world");
 
         System.out.println(builder);
+
+
+        /**
+         * implementation of fluent interface
+         * with recursive generics
+         */
+        EmployeeBuilder pb = new EmployeeBuilder();
+
+        Person person = pb.withName("jethronap").worksAt("ICT").build();
+        System.out.println(person);
     }
 }
