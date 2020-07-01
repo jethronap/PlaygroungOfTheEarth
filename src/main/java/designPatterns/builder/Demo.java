@@ -43,5 +43,22 @@ public class Demo {
 
         Person person = pb.withName("jethronap").worksAt("ICT").build();
         System.out.println(person);
+
+        /**
+         * demonstrate builder facade
+         */
+        PersonNewBuilder personNewBuilder = new PersonNewBuilder();
+        // initialise a PersonNew
+        PersonNew personNew = personNewBuilder
+                .lives()
+                    .at("123 Somewhere Str")
+                    .in("Athens")
+                    .withPostCode("123456")
+                .works()
+                    .at("OpenLab")
+                    .asA("Researcher")
+                    .earning(1234)
+                .build();
+        System.out.println(personNew);
     }
 }
