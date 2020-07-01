@@ -6,7 +6,7 @@ package designPatterns.builder;
 public class PersonNewBuilder {
 
     // the obj that gets stored
-    protected Person person = new Person();
+    protected PersonNew person = new Person();
 
     // method to expose Person
     public Person build() {
