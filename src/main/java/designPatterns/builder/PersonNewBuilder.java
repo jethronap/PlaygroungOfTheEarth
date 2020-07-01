@@ -1,7 +1,7 @@
 package designPatterns.builder;
 
 /**
- * combination of builder and facade pattern
+ * combination of builder and faceted pattern
  */
 public class PersonNewBuilder {
 
