@@ -45,7 +45,7 @@ public class Demo {
         System.out.println(person);
 
         /**
-         * demonstrate builder facade
+         * demonstrate builder faceted
          */
         PersonNewBuilder personNewBuilder = new PersonNewBuilder();
         // initialise a PersonNew
