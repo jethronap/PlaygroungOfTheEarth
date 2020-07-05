@@ -14,13 +14,20 @@ public class Point {
         this.y = y;
     }
 
-    // factory method to produce dedicated cartesian points
-    public static Point newCartesianPoint(double x, double y) {
-        return new Point(x, y);
+    /**
+     * inner class that allows the use
+     * private Point constructor
+     */
+    public  static class Factory {
+        // factory method to produce dedicated cartesian points
+        public static Point newCartesianPoint(double x, double y) {
+            return new Point(x, y);
+        }
+
+        // factory method to produce dedicated polar points
+        public static Point newPolarPoint(double rho, double theta) {
+            return new Point(rho*Math.cos(theta), rho*Math.sin(theta));
+        }
     }
 
-    // factory method to produce dedicated polar points
-    public static Point newPolarPoint(double rho, double theta) {
-        return new Point(rho*Math.cos(theta), rho*Math.sin(theta));
-    }
 }
