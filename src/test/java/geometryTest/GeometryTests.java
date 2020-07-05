@@ -1,3 +1,5 @@
+package geometryTest;
+
 import geometry.Triangle;
 import org.junit.Test;
 
