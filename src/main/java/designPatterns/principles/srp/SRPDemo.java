@@ -1,4 +1,4 @@
-package designPatterns.srp;
+package designPatterns.principles.srp;
 
 public class SRPDemo {
     public static void main(String[] args) throws Exception {

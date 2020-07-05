@@ -1,4 +1,4 @@
-package designPatterns.ocp;
+package designPatterns.principles.ocp;
 
 /**
  * This interface satisfies OCP: Open for extension, closed for modification

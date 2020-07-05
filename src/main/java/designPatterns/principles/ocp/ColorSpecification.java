@@ -1,4 +1,4 @@
-package designPatterns.ocp;
+package designPatterns.principles.ocp;
 
 /**
  * this is a specification class

@@ -1,4 +1,4 @@
-package designPatterns.srp;
+package designPatterns.principles.srp;
 
 import java.util.ArrayList;
 import java.util.List;

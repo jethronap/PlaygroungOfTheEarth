@@ -1,4 +1,4 @@
-package designPatterns.srp;
+package designPatterns.principles.srp;
 
 import java.io.File;
 import java.io.PrintStream;

@@ -1,4 +1,4 @@
-package designPatterns.ocp;
+package designPatterns.principles.ocp;
 
 import java.util.List;
 import java.util.stream.Stream;
