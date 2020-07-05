@@ -1,6 +1,8 @@
 package designPatterns.prototype;
 
-public class Foo {
+import java.io.Serializable;
+
+public class Foo implements Serializable {
 
     public int something;
     public String whatever;
