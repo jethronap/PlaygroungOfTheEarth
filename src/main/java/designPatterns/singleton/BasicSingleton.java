@@ -12,10 +12,10 @@ public class BasicSingleton {
     private BasicSingleton() {}
 
     // for a client to access the constructor
-    private final BasicSingleton INSTANCE = new BasicSingleton();
+    private static final BasicSingleton INSTANCE = new BasicSingleton();
 
     //expose the Singleton
-    public BasicSingleton getINSTANCE() {
+    public static BasicSingleton getINSTANCE() {
         return INSTANCE;
     }
 
