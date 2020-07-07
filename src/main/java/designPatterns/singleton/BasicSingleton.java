@@ -28,4 +28,13 @@ public class BasicSingleton implements Serializable {
     public void setValue(int value) {
         this.value = value;
     }
+
+    /**
+     * helper method to indicate to JVM
+     * that all serializations will take place
+     * inside INSTANCE, not another copy of it.
+     */
+    protected Object readResolve() {
+        return INSTANCE;
+    }
 }
