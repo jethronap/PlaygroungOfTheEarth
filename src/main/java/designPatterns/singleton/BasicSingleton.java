@@ -1,10 +1,12 @@
 package designPatterns.singleton;
 
+import java.io.Serializable;
+
 /**
  * enforces that only one instance
  * of this class exists
  */
-public class BasicSingleton {
+public class BasicSingleton implements Serializable {
 
     private int value = 0;
 
