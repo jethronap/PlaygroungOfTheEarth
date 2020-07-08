@@ -53,5 +53,13 @@ public class Demo {
 
         System.out.println(singleton.getValue());
         System.out.println(singleton1.getValue());
+
+        /**
+         * Enum based singleton impl
+         *
+         * the same serialization and deserialization
+         * methodology can be used. However, serialization cannot be
+         * done properly and inheritance cannot be used for this impl.
+         */
     }
 }
