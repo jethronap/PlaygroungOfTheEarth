@@ -14,6 +14,8 @@ public class Demo {
     ));
 
     // the api for drawing points
+    // (i.e no way to build vectors through points,
+    // here is where the adapter pattern comes to play)
     public static void drawPoint(Point p) {
         System.out.println(".");
     }
