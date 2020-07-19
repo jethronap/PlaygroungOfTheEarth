@@ -20,7 +20,26 @@ public class Demo {
         System.out.println(".");
     }
 
+    // this is the method to draw
+    private static void draw() {
+        for (VectorObject vo: vectorObjects) {
+            // every obj consists of lines
+            for (Line line: vo) {
+                LineToPointAdapter adapter = new LineToPointAdapter(line);
+                adapter.forEach(Demo::drawPoint);
+            }
+        }
+    }
+
     public static void main(String[] args) {
 
+        draw();
+        /**
+         * if draw(); is called once more
+         * it generates another 8 points
+         * while what is needed is still
+         * two rectangles. the points are not
+         * re-usable.
+         */
     }
 }
