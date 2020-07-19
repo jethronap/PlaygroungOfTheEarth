@@ -13,6 +13,11 @@ public class Demo {
                     new VectorRectangle(2,2,20,20)
     ));
 
+    // the api for drawing points
+    public static void drawPoint(Point p) {
+        System.out.println(".");
+    }
+
     public static void main(String[] args) {
 
     }
