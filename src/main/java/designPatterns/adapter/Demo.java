@@ -37,9 +37,10 @@ public class Demo {
         /**
          * if draw(); is called once more
          * it generates another 8 points
-         * while what is needed is still
-         * two rectangles. the points are not
-         * re-usable.
+         * while what is needed, is two rectangles.
+         * the points are not re-usable,
+         * without a caching implementation.
          */
+        draw();
     }
 }
