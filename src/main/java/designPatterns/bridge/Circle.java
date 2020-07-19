@@ -1,9 +1,12 @@
 package designPatterns.bridge;
 
+import com.google.inject.Inject;
+
 public class Circle extends Shape {
 
     public float radius;
 
+    @Inject
     public Circle(Renderer renderer) {
         super(renderer);
     }
